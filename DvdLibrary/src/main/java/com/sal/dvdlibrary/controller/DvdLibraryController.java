@@ -16,6 +16,7 @@ import java.util.List;
  *
  * @author eleon
  */
+//Uses Dependency Injection
 public class DvdLibraryController {
 
     // Creating private variables

@@ -12,6 +12,8 @@ import java.util.List;
  *
  * @author eleon
  */
+
+//Uses Dependency Injection
 public class DvdLibraryView {
 
 
