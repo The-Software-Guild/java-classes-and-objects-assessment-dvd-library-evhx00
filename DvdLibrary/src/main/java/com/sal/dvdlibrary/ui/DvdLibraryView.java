@@ -27,14 +27,14 @@ public class DvdLibraryView {
         // prints menu
         // ==========================================   IMPLEMENTATION  ================================================
         io.print("Main Menu");
-        io.print("1. Add a DVD to the collection");
-        io.print("2. Remove a DVD from the collection");
-        io.print("3. Edit information for an existing DVD in the collection");
-        io.print("4. List DVD's");
+        io.print("1. Add a DVD");
+        io.print("2. Remove a DVDn");
+        io.print("3. Edit information for an existing DVD");
+        io.print("4. List the DVD's");
         io.print("5. Search DVD by title");
         io.print("6. Exit");
 
-        return io.readInt("Please select from the above choices.", 1, 8);
+        return io.readInt("Please select from the choices.", 1, 8);
     }
     public int printEditMenuAndGetSelection() {
       //implement
@@ -49,7 +49,7 @@ public class DvdLibraryView {
         io.print("5. Edit user rating");
         io.print("6. Exit");
 
-        return io.readInt("Please select from the above choices.", 1, 8);
+        return io.readInt("Please select from the choices.", 1, 8);
     }
     /*
      This method prompts the user for dvd ID, First Name, Last Name, and Cohort, 
@@ -59,12 +59,12 @@ public class DvdLibraryView {
      //implement
         // ==========================================   IMPLEMENTATION  ================================================
 
-        String title = io.readString("Please enter DVD tile");
-        String releaseDate = io.readString("Please enter DVD release Date");
-        String MPAA = io.readString("Please enter MPAA rating");
-        String directorsName = io.readString("Please enter Directors full name");
-        String studio = io.readString("Please enter Studio name");
-        String userRating = io.readString("Please enter user rating");
+        String title = io.readString("Enter DVD tile");
+        String releaseDate = io.readString("Enter DVD release Date");
+        String MPAA = io.readString("Enter MPAA rating");
+        String directorsName = io.readString("Enter Directors full name");
+        String studio = io.readString("Enter Studio name");
+        String userRating = io.readString("Enter user rating");
 
         DvD currentDVD = new DvD(title);
         currentDVD.setReleaseDate(releaseDate);
@@ -109,7 +109,7 @@ public class DvdLibraryView {
                     currentDvd.getUserRating());
             io.print(DvdInfo);
         }
-        io.readString("Please hit enter to continue.");
+        io.readString("Hit enter to continue.");
     }
 
     public void displayDisplayAllBanner() {
