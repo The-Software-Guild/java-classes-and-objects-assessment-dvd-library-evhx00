@@ -89,7 +89,7 @@ public class DvdLibraryView {
      */
     public void displayCreateSuccessBanner() {
         io.readString(
-                "DvD successfully created.  Please hit enter to continue");
+                "DvD successfully created.  Hit enter to continue");
     }
 
     /*
@@ -146,9 +146,9 @@ public class DvdLibraryView {
             io.print(dvd.getUserRating());
             io.print("");
         } else {
-            io.print("No such DVD.");
+            io.print("DVD does not exist.");
         }
-        io.readString("Please hit enter to continue.");
+        io.readString("Hit enter to continue.");
     }
 
     public void displayRemoveDvdBanner() {
@@ -162,9 +162,9 @@ public class DvdLibraryView {
         if(dvdRecord != null){
             io.print("DVD successfully removed.");
         }else{
-            io.print("No such DVD.");
+            io.print("DVD does not exist.");
         }
-        io.readString("Please hit enter to continue.");
+        io.readString("Hit enter to continue.");
     }
 
     public void displayExitBanner() {
@@ -185,7 +185,7 @@ public class DvdLibraryView {
 
     public void displayEditDvdSuccess() {
         io.readString(
-                "DVD successfully Edited.  Please hit enter to continue");
+                "DVD successfully Edited.  Hit enter to continue");
     }
 
     public void displayEditReleaseDateBanner() {
@@ -231,7 +231,7 @@ public class DvdLibraryView {
     }
 
     public void displayNullDVD() {
-        io.print("No such DVD.");
-        io.readString("Please hit enter to continue.");
+        io.print("DVD does not exist.");
+        io.readString("Hit enter to continue.");
     }
 }
