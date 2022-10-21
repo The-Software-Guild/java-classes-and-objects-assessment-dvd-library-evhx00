@@ -9,7 +9,7 @@ package com.sal.dvdlibrary.dto;
  *
  * @author eleon
  */
-import java.util.Date;
+
 
 public class DvD {
     private final String title;
@@ -26,6 +26,7 @@ public class DvD {
     // ==========================================   IMPLEMENTATION  ================================================
 
     // Add Getters!!!
+    //Transfer data objects
 
     public String getTitle() {
         return title;

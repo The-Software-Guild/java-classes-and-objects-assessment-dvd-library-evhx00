@@ -23,7 +23,7 @@ public class App {
         Instantiate the UserIO, DvdLibraryView,dvdLibraryDao,  DvdLibraryController class and call the run method 
          */
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // main used to run the controller
         UserIO myIo = new UserIOConsoleImpl();
         DvdLibraryView myView = new DvdLibraryView(myIo);
         dvdLibraryDao myDao = new DvdLibraryDaoFileImpl();

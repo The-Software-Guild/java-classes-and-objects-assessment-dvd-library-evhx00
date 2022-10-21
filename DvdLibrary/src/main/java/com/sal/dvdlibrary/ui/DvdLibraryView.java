@@ -14,14 +14,17 @@ import java.util.List;
  */
 public class DvdLibraryView {
 
+
     private final UserIO io;
 
+    // Used for User Interface
     public DvdLibraryView(UserIO io) {
         this.io = io;
     }
 
     public int printMenuAndGetSelection() {
        //implement
+        // prints menu
         // ==========================================   IMPLEMENTATION  ================================================
         io.print("Main Menu");
         io.print("1. Add a DVD to the collection");
@@ -36,6 +39,7 @@ public class DvdLibraryView {
     public int printEditMenuAndGetSelection() {
       //implement
         // ==========================================   IMPLEMENTATION  ================================================
+        // prints menu
 
         io.print("Edit DVD Menu");
         io.print("1. Edit title");
@@ -94,9 +98,15 @@ public class DvdLibraryView {
     public void displayDvdList(List<DvD> dvdList) {
      //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // Formats into string, then prints
         for (DvD currentDvd : dvdList) {
-            String DvdInfo = String.format("#%s : %s %s %s %s %s", currentDvd.getTitle(), currentDvd.getReleaseDate(),currentDvd.getMPAA(), currentDvd.getDirectorsName(), currentDvd.getStudio(),currentDvd.getUserRating());
+            String DvdInfo = String.format("#%s : %s %s %s %s %s",
+                    currentDvd.getTitle(),
+                    currentDvd.getReleaseDate(),
+                    currentDvd.getMPAA(),
+                    currentDvd.getDirectorsName(),
+                    currentDvd.getStudio(),
+                    currentDvd.getUserRating());
             io.print(DvdInfo);
         }
         io.readString("Please hit enter to continue.");
@@ -126,7 +136,7 @@ public class DvdLibraryView {
     public void displayDvd(DvD dvd) {
         //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // Displays DVD info using getters
         if (dvd != null) {
             io.print(dvd.getTitle());
             io.print(dvd.getReleaseDate());
@@ -148,7 +158,7 @@ public class DvdLibraryView {
     public void displayRemoveResult(DvD dvdRecord) {
        //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // Uses reasString to display the DVD information
         if(dvdRecord != null){
             io.print("DVD successfully removed.");
         }else{
