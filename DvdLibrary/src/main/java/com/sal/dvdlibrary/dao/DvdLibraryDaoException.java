@@ -7,7 +7,7 @@ package com.sal.dvdlibrary.dao;
 
 /**
  *
- * @author salajrawi
+ * @author eleon
  */
 public class DvdLibraryDaoException extends Exception{
     

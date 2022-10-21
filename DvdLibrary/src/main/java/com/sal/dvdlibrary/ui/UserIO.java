@@ -7,7 +7,7 @@ package com.sal.dvdlibrary.ui;
 
 /**
  *
- * @author salajrawi
+ * @author eleon
  */
 public interface UserIO {
     void print(String msg);

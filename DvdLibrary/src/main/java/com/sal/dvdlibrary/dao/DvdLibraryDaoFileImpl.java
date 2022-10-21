@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author salajrawi
+ * @author eleon
  */
 public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
 
@@ -34,14 +34,14 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
       public DvdLibraryDaoFileImpl(){ //no arg constructor typically used
         DVD_FILE = "dvdTest.txt";
     }
-      public DvdLibraryDaoFileImpl(String libraryTextFile){
-        DVD_FILE = libraryTextFile;
-    }
-    
+
+    // Adds DVD object to the memory and DVD File
     @Override
     public DvD addDvd(String title, DvD dvd) throws DvdLibraryDaoException {
         //implement
-          loadDvdFile();
+        // ==========================================   IMPLEMENTATION  ================================================
+
+        loadDvdFile();
           DvD newDvd = dvds.put(title, dvd);
           writeDvdFile();
           return newDvd;
@@ -54,7 +54,7 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     public List<DvD> getAllDvds() throws DvdLibraryDaoException {
        //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // Loads Dvd objects from the File as list
         loadDvdFile();
         return new ArrayList(dvds.values());
     }
@@ -66,7 +66,7 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     public DvD getDvd(String title)throws DvdLibraryDaoException {
       //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // Loads DVD title from dvds
         loadDvdFile();
         return dvds.get(title);
     }
@@ -75,7 +75,7 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     public DvD removeDvd(String title) throws DvdLibraryDaoException{
        //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // Removes a single DVD object from memory and the file
         loadDvdFile();
         DvD removedDvd = dvds.remove(title);
         writeDvdFile();
@@ -91,9 +91,10 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     private DvD unmarshallDvd(String dvdAsText) {
         //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
+        // Splits the DVD info using the Delimiter
         String[] dvdTokens = dvdAsText.split(DELIMITER);
         String dvdTitle = dvdTokens[0];
+        // Convert to DVD objects using the dvd constructor in specific indexes
         DvD dvdFromFile = new DvD(dvdTitle);
         dvdFromFile.setReleaseDate(dvdTokens[1]);
         dvdFromFile.setMPAA(dvdTokens[2]);
@@ -136,13 +137,13 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     private String marshallDvd(DvD aDvd) {
        //implement
         // ==========================================   IMPLEMENTATION  ================================================
-
-        String dvdAsText = aDvd.getTitle()+DELIMITER;
-        dvdAsText += aDvd.getReleaseDate()+DELIMITER;
-        dvdAsText += aDvd.getMPAA()+DELIMITER;
-        dvdAsText += aDvd.getDirectorsName()+DELIMITER;
-        dvdAsText += aDvd.getStudio()+DELIMITER;
-        dvdAsText += aDvd.getUserRating()+DELIMITER;
+        // Converts DVD objects into a string with a Delimiter
+        String dvdAsText = aDvd.getTitle() + DELIMITER;
+        dvdAsText += aDvd.getReleaseDate() + DELIMITER;
+        dvdAsText += aDvd.getMPAA() + DELIMITER;
+        dvdAsText += aDvd.getDirectorsName() + DELIMITER;
+        dvdAsText += aDvd.getStudio() + DELIMITER;
+        dvdAsText += aDvd.getUserRating() + DELIMITER;
 
         return dvdAsText;
     }

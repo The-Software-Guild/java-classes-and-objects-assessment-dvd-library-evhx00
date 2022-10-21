@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author salajrawi
+ * @author eleon
  */
 public class UserIOConsoleImpl implements UserIO {
 

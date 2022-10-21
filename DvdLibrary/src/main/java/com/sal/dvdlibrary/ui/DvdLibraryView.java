@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author salajrawi
+ * @author eleon
  */
 public class DvdLibraryView {
 

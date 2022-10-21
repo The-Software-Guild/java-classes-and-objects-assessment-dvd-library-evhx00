@@ -14,7 +14,7 @@ import com.sal.dvdlibrary.ui.UserIOConsoleImpl;
 
 /**
  *
- * @author salajrawi
+ * @author eleon
  */
 public class App {
 
